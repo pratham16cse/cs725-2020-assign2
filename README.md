@@ -86,7 +86,8 @@ Id,Predictions
 ```
 
 You are free to use any hyper-parameters in this task.
-Report the hyper-parameter configurations you used and score obtained on test data in the leaderboard. Clearly specify the hyper-parameters you used and the score obtained on leaderboard using those hyper-parameter configurations.
+<!---Report the hyper-parameter configurations you used and score obtained on test data in the leaderboard.--->
+Clearly specify the hyper-parameters you used and the score obtained on leaderboard using those hyper-parameter configurations
 
 #### What to submit in Part 2?
 Create a section `Part 2` in the `Report.pdf` and write the hyper-parameters and scores obtained on test data.
