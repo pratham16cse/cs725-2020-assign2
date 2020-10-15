@@ -3,7 +3,7 @@
 ## General Instructions
 Please read the following important instructions before getting started on the assignment.
 1. This assignment should be completed individually.
-2. This assignment is entirely programming-based. A correponding Kaggle task is also hosted [here](https://www.kaggle.com/c/cs725-autumn-2020-assignment-2/overview).
+2. This assignment is entirely programming-based. A correponding Kaggle task is also hosted [here](https://www.kaggle.com/c/cs725-autumn-2020-assignment-2/overview). Instructions to join the Kaggle competition will be shared on Moodle.
 3. Your final submission should be a .tar.gz bundle of a directory organized exactly as described in the [Submission Instructions](#submission-instructions). Submissions that do not strictly adhere to this structure will be penalized.
 4. Successful completion of the assignment would include: (A) Submitting <your-roll-number>.tar.gz on Moodle and (B) Having your roll number appear on the Kaggle leaderboard.
 
