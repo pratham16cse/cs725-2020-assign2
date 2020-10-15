@@ -25,7 +25,6 @@ This assignment will familiarize you with training and evaluating feedforward ne
 .
 .
 91. TimbreCovariance78
-
 ```
 <!---| Label       | TimberAvg1 | TimberAvg2 | ... | TimberAvg12 | TimbreCovariance1 | TimbreCovariance2 | ... | TimbreCovariance78 | --->
 <!---|---|---|---|---|---|---|---|---|---|--->
