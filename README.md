@@ -43,6 +43,7 @@ For both Part 1.A and Part 1.B, use fixed values of following hyper-parameters:
 - Number of epochs: 50
 - Batch size for training: 128
 - Seed for numpy: 42
+- Use ReLU activation function for all HIDDEN layers.
 ```
 #### What to submit in Part 1.A?
 For Part 1.A, there is no report submission. Only code needs to be submitted.
