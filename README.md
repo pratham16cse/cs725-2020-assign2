@@ -12,6 +12,8 @@ This assignment will familiarize you with training and evaluating feedforward ne
 
 ## Dataset Information
 - The dataset contains three files `train.csv`, `dev.csv`, and `test.csv`
+- Each row in the `__.csv` file contains timbre-based audio features extracted from a song.
+- The dataset has 90 features: 12 timbre average values and 78 timbre covariance values. Each column denotes a feature.
 - `train.csv` and `dev.csv` contains following columns:
 ```
 1. label - Year of release of the song in the range [1922, 2011]
@@ -34,7 +36,7 @@ This assignment will familiarize you with training and evaluating feedforward ne
 In Part 1, you will implement the neural network, train it using train data and report its performance on dev data.
 
 ### Part 1.A (25 Points)
-Implement the functions definitions given in `nn.py` to crate and train a neural network. Run stochastic gradient descent on Mean Squared Error (MSE) loss function.
+Implement the functions definitions given in `nn.py` to create and train a neural network. Run stochastic gradient descent on Mean Squared Error (MSE) loss function.
 
 For both Part 1.A and Part 1.B, use fixed values of following hyper-parameters:
 ```
@@ -84,7 +86,7 @@ Id,Predictions
 ```
 
 You are free to use any hyper-parameters in this task.
-Report the hyper-parameter configurations you used and score obtained on test data in the leaderboard. Clearly specify the hyper-parameters you used to and the score obtained on leaderboard using those hyper-parameter configurations.
+Report the hyper-parameter configurations you used and score obtained on test data in the leaderboard. Clearly specify the hyper-parameters you used and the score obtained on leaderboard using those hyper-parameter configurations.
 
 #### What to submit in Part 2?
 Create a section `Part 2` in the `Report.pdf` and write the hyper-parameters and scores obtained on test data.
