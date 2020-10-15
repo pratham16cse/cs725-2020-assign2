@@ -17,11 +17,11 @@ This assignment will familiarize you with training and evaluating feedforward ne
 - `train.csv` and `dev.csv` contains following columns:
 ```
 1. label - Year of release of the song in the range [1922, 2011]
-2. TimberAvg1
-3. TimberAvg2
+2. TimbreAvg1
+3. TimbreAvg2
 .
 .
-13. TimberAvg12
+13. TimbreAvg12
 14. TimbreCovariance1
 15. TimbreCovariance2
 .
