@@ -68,7 +68,8 @@ Report Root Mean Squared Error (RMSE) on training and dev data using following h
 |0.01 | 2 | 128 | 10 |
 
 #### What to submit in Part 1.B?
-Create a section `Part 1.B` in the `Report.pdf` and fill the above table in this section.
+1. Fill the table in `Results.csv` file given in this repository.
+2. Create a section `Part 1.B` in the `Report.pdf` and write your observations from the results in `Results.csv` file.
 
 ## Part 2 (10 points)
 In Part 2, you will evaluate your network's performance on test data given in `test.csv`. Submit your predictions on test data on [Kaggle competition](https://www.kaggle.com/c/cs725-autumn-2020-assignment-2/overview) in a `<roll_number>.csv` file in the following format:
@@ -97,7 +98,7 @@ You can explore following techniques to get better generalization performance
 - [Early Stopping](https://youtu.be/zm5cqvfKO-o?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
 
 ## Submission Instructions
-- Your submission should contain three files: (i) `nn.py`, (ii)`Report.pdf`, and (iii)`Readme.txt`.
+- Your submission should contain four files: (i) `nn.py`, (ii)`Report.pdf`, (iii)`Results.csv`, and (iii)`Readme.txt`.
 - Use `Readme.txt` to describe any other information needed to run your code successfully.
 - Add these files to directory `<your_roll_number>`.
 - Compress the directory `<your_roll_number>` in .tgz format using following command:
