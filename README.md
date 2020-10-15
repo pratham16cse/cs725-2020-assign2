@@ -41,7 +41,7 @@ Implement the functions definitions given in `nn.py` to create and train a neura
 For both Part 1.A and Part 1.B, use fixed values of following hyper-parameters:
 ```
 - Number of epochs: 50
-- Batch size for training: 256
+- Batch size for training: 128
 - Seed for numpy: 42
 ```
 #### What to submit in Part 1.A?
