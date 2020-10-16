@@ -36,7 +36,7 @@ This assignment will familiarize you with training and evaluating feedforward ne
 In Part 1, you will implement the neural network, train it using train data and report its performance on dev data.
 
 ### Part 1.A (25 Points)
-Implement the functions definitions given in `nn.py` to create and train a neural network. Run stochastic gradient descent on Mean Squared Error (MSE) loss function.
+Implement the functions definitions given in [nn.py](nn.py) to create and train a neural network. Run stochastic gradient descent on Mean Squared Error (MSE) loss function.
 
 For both Part 1.A and Part 1.B, use fixed values of following hyper-parameters:
 ```
