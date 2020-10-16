@@ -54,7 +54,7 @@ Initialize Weights and Biases using uniform distribution in the range \[-1, 1\].
 
 
 #### What to submit in Part 1.A?
-For Part 1.A, there is no report submission. Only code needs to be submitted.
+For Part 1.A, only code needs to be submitted.
 
 ### Part 1.B (15 Points)
 Report Root Mean Squared Error (RMSE) on training and dev data using following hyper-parameter configurations.
