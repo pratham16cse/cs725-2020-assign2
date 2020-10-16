@@ -72,11 +72,17 @@ Report Root Mean Squared Error (RMSE) on training and dev data using following h
 |0.01 | 2 | 128 | 5 |
 
 #### What to submit in Part 1.B?
-1. Fill the table in `Results.csv` file given in this repository.
-2. Create a section `Part 1.B` in the `Report.pdf` and write your observations from the results in `Results.csv` file.
+Fill the table in `part_1b.csv` file given in [this](https://github.com/pratham16cse/cs725-2020-assign2) repository.
+<!---2. Create a section `Part 1.B` in the `Report.pdf` and write your observations from the results in `Results.csv` file.--->
 
 ## Part 2 (10 points)
-In Part 2, you will evaluate your network's performance on test data given in `test.csv`. Submit your predictions on test data on [Kaggle competition](https://www.kaggle.com/c/cs725-autumn-2020-assignment-2/overview) in a `<roll_number>.csv` file in the following format:
+In Part 2, you will evaluate your network's performance on test data given in `test.csv`.
+
+In this part, there is no restriction on any hyper-parameter values. You are also allowed to explore various hyper-parameter tuning and cross-validation techniques.
+
+You are also free to create any wrapper functions over given functinos in [nn.py](nn.py)
+
+Submit your predictions on test data on [Kaggle competition](https://www.kaggle.com/c/cs725-autumn-2020-assignment-2/overview) in a `<roll_number>.csv` file in the following format:
 ```
 Id,Predictions
 1.0,2000.0
@@ -87,12 +93,20 @@ Id,Predictions
 10000.0,2000.0
 ```
 
-You are free to use any hyper-parameters in this task.
 <!---Report the hyper-parameter configurations you used and score obtained on test data in the leaderboard.--->
-Clearly specify the hyper-parameters you used and the score obtained on leaderboard using those hyper-parameter configurations
+<!---Clearly specify the hyper-parameters you used and the score obtained on leaderboard using those hyper-parameter configurations.--->
+In a CSV file, write the name of the hyper-parameter and the value you used.
 
 #### What to submit in Part 2?
-Create a section `Part 2` in the `Report.pdf` and write the hyper-parameters and scores obtained on test data.
+Create a two-column csv file `part_2.csv` and write the name of hyper-parameter in first column and value in the second column.
+
+For example:
+| Name | Value |
+|---|---|
+| `learning_rate` | 0.003 |
+| `batch_size` | 48 |
+| `dropout` | 0.15 |
+
 
 #### Tips to improve your rank on leaderboard
 You can explore following techniques to get better generalization performance
@@ -103,7 +117,7 @@ You can explore following techniques to get better generalization performance
 - [Early Stopping](https://youtu.be/zm5cqvfKO-o?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
 
 ## Submission Instructions
-- Your submission should contain four files: (i) `nn.py`, (ii)`Report.pdf`, (iii)`Results.csv`, and (iii)`Readme.txt`.
+- Your submission should contain four files: (i) `nn.py`, (ii)`part_1b.pdf`, (iii)`part_2.csv`, and (iii)`Readme.txt`.
 - Use `Readme.txt` to describe any other information needed to run your code successfully.
 - Add these files to directory `<your_roll_number>`.
 - Compress the directory `<your_roll_number>` in .tgz format using following command:
