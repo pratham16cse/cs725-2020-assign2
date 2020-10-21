@@ -24,7 +24,7 @@ class Net(object):
 		Parameters
 		----------
 			X : Either an input vector or a matrix with input vectors
-				placed on columns.
+				placed on rows.
 		Returns
 		----------
 			y : Output of the network.
@@ -39,7 +39,7 @@ class Net(object):
 		Parameters
 		----------
 			X : Feature vectors of training examples 
-				(arranged columnwise in 'X' matrix)
+				(arranged rowwise in 'X' matrix)
 			y : Targets of each example in X
 			lamda : Regularization parameter.
 
