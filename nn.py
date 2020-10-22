@@ -5,6 +5,8 @@ import pandas as pd
 
 np.random.seed(42)
 
+NUM_FEATS = 90
+
 class Net(object):
 	'''
 	'''
@@ -13,6 +15,11 @@ class Net(object):
 		'''
 		Initialize the neural network.
 		Create weights and biases.
+
+		Parameters
+		----------
+			num_layers : Number of HIDDEN layers.
+			num_units : Number of units in each Hidden layer.
 		'''
 		raise NotImplementedError
 
@@ -23,11 +30,10 @@ class Net(object):
 		
 		Parameters
 		----------
-			X : Either an input vector or a matrix with input vectors
-				placed on rows.
+			X : Input to the network, numpy array of shape m x d
 		Returns
 		----------
-			y : Output of the network.
+			y : Output of the network, numpy array of shape m x 1
 		'''
 		raise NotImplementedError
 
@@ -38,9 +44,8 @@ class Net(object):
 
 		Parameters
 		----------
-			X : Feature vectors of training examples 
-				(arranged rowwise in 'X' matrix)
-			y : Targets of each example in X
+			X : Input to the network, numpy array of shape m x d
+			y : Output of the network, numpy array of shape m x 1
 			lamda : Regularization parameter.
 
 		Returns
@@ -88,8 +93,8 @@ def loss_mse(y, y_hat):
 
 	Parameters
 	----------
-		y : targets
-		y_hat : predictions
+		y : targets, numpy array of shape m x 1
+		y_hat : predictions, numpy array of shape m x 1
 
 	Returns
 	----------
@@ -117,8 +122,8 @@ def loss_fn(y, y_hat, weights, biases, lamda):
 
 	Parameters
 	----------
-		y : targets
-		y_hat : predictions
+		y : targets, numpy array of shape m x 1
+		y_hat : predictions, numpy array of shape m x 1
 		weights and biases of the network
 		lamda: Regularization parameter
 
@@ -134,8 +139,8 @@ def rmse(y, y_hat):
 
 	Parameters
 	----------
-		y : targets
-		y_hat : predictions
+		y : targets, numpy array of shape m x 1
+		y_hat : predictions, numpy array of shape m x 1
 
 	Returns
 	----------
@@ -145,7 +150,7 @@ def rmse(y, y_hat):
 
 
 def train(
-	net, optimizer, lamda,
+	net, optimizer, lamda, batch_size, max_epochs,
 	train_input, train_target,
 	dev_input, dev_target
 ):
@@ -163,10 +168,17 @@ def get_test_data_predictions(net, inputs):
 	'''
 	Perform forward pass on test data and get the final predictions that can
 	be submitted on Kaggle.
+	Write the final predictions to the part2.csv file.
+
+	Parameters
+	----------
+		net : trained neural network
+		inputs : test input, numpy array of shape m x d
 
 	Returns
 	----------
-		predictions: Predictions obtained from the forward pass
+		predictions (optional): Predictions obtained from forward pass
+								on test data, numpy array of shape m x 1
 	'''
 	raise NotImplementedError
 
@@ -195,7 +207,7 @@ def main():
 	net = Net(num_layers, num_units)
 	optimizer = Optimizer(learning_rate)
 	train(
-		net, optimizer, lamda
+		net, optimizer, lamda, batch_size, max_epochs,
 		train_input, train_target,
 		dev_input, dev_target
 	)
