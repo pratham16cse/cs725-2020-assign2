@@ -90,7 +90,7 @@ In this part, there is no restriction on any hyper-parameter values. You are als
 
 You are also free to create any wrapper functions over given functinos in [nn.py](nn.py)
 
-Submit your predictions on test data on [Kaggle competition](https://www.kaggle.com/c/cs725-autumn-2020-assignment-2/overview) in a `<roll_number>.csv` file in the following format:
+Submit your predictions on test data on [Kaggle competition](https://www.kaggle.com/c/cs725-autumn-2020-programming-assignment-2/overview) in a `<roll_number>.csv` file in the following format:
 ```
 Id,Predictions
 1.0,2000.0
