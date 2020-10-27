@@ -39,7 +39,7 @@ This assignment will familiarize you with training and evaluating feedforward ne
 In Part 1, you will implement the neural network, train it using train data and report its performance on dev data.
 
 ### Part 1.A (25 Points)
-Implement the functions definitions given in [nn.py](nn.py) to create and train a neural network. Run stochastic gradient descent on Mean Squared Error (MSE) loss function.
+Implement the functions definitions given in [nn.py](nn.py) to create and train a neural network. Run mini-batch gradient descent on Mean Squared Error (MSE) loss function.
 
 For both Part 1.A and Part 1.B, use fixed values of following hyper-parameters:
 ```
@@ -54,7 +54,7 @@ Initialize Weights and Biases using uniform distribution in the range \[-1, 1\].
 
 
 #### What to submit in Part 1.A?
-For Part 1.A, only code needs to be submitted.
+For Part 1.A, only code needs to be submitted in the file `nn_1.py`.
 
 ### Part 1.B (15 Points)
 Report Root Mean Squared Error (RMSE) on training and dev data using following hyper-parameter configurations.
@@ -107,6 +107,7 @@ In a CSV file, write the name of the hyper-parameter and the value you used.
 
 #### What to submit in Part 2?
 Create a two-column csv file `part_2.csv` and write the name of hyper-parameter in first column and value in the second column.
+Also submit your code for part 2 in `nn_2.py`. This code may contain all the enhancements you did for part 2.
 
 For example:
 | Name | Value |
@@ -125,7 +126,7 @@ You can explore following techniques to get better generalization performance
 - [Early Stopping](https://youtu.be/zm5cqvfKO-o?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
 
 ## Submission Instructions
-- Your submission should contain four files: (i) `nn.py`, (ii)`part_1b.pdf`, (iii)`part_2.csv`, and (iii)`Readme.txt`.
+- Your submission should contain five files: (i) `nn_1.py`, (ii) `nn_2.py`, (ii)`part_1b.pdf`, (iii)`part_2.csv`, and (iii)`Readme.txt`.
 - Use `Readme.txt` to describe any other information needed to run your code successfully.
 - Add these files to directory `<your_roll_number>`.
 - Compress the directory `<your_roll_number>` in .tgz format using following command:
