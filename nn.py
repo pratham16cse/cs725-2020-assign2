@@ -64,7 +64,7 @@ class Optimizer(object):
 
 	def __init__(self, learning_rate):
 		'''
-		Create a Stochastic Gradient Descent (SGD) based optimizer with given
+		Create a Gradient Descent based optimizer with given
 		learning rate.
 
 		Other parameters can also be passed to create different types of
