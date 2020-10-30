@@ -195,3 +195,4 @@ Please refer to [this file](gradients.pdf) for a detailed explanation of above e
 single expression, design gradients of all weight vectors in the same way.
 2. Do not get hung up over multiplications and divisions by constants such as 2 or m. These constants do not affect the final performance of the network.
 3. For dev, there is no need to have batches, entire dev data can be passed as a single batch.
+4. Refer to [this link](https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf) to understand more about gradient computation.
