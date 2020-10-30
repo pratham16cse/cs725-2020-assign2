@@ -187,6 +187,7 @@ can be written as
 loss_gradient = a_states[-1] * (pred - target) # batch_size x num_units
 update_gradient = 1./batch_size * np.sum(loss_gradient, axis=0) # num_units
 ```
+Please refer to [this file](gradients.pdf) for a detailed explanation of above expression.
 `update_gradient` can be used to update the `weights[-1]` as `weights[-1] = weights - learning_rate*update_gradient`.
 
 # General Guidelines
