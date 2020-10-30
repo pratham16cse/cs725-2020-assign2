@@ -16,12 +16,42 @@ class Net(object):
 		Initialize the neural network.
 		Create weights and biases.
 
+		Here, we have provided an example structure for the weights and biases.
+		It is a list of weight and bias matrices, in which, the
+		dimensions of weights and biases are (assuming 1 input layer, 2 hidden layers, and 1 output layer):
+		weights: [(NUM_FEATS, num_units), (num_units, num_units), (num_units, num_units), (num_units, 1)]
+		biases: [(num_units, 1), (num_units, 1), (num_units, 1), (num_units, 1)]
+
+		Please note that this is just an example.
+		You are free to modify or entirely ignore this initialization as per your need.
+		Also you can add more state-tracking variables that might be useful to compute
+		the gradients efficiently.
+
+
 		Parameters
 		----------
 			num_layers : Number of HIDDEN layers.
 			num_units : Number of units in each Hidden layer.
 		'''
-		raise NotImplementedError
+		self.num_layers = num_layers
+		self.num_units = num_units
+
+		self.biases = []
+		self.weights = []
+		for i in range(num_layers):
+
+			if i==0:
+				# Input layer
+				self.weights.append(np.random.uniform(-1, 1, size=(NUM_FEATS, self.num_units)))
+			else:
+				# Hidden layer
+				self.weights.append(np.random.uniform(-1, 1, size=(self.num_units, self.num_units)))
+
+			self.biases.append(np.random.uniform(-1, 1, size=(self.num_units, 1)))
+
+		# Output layer
+		self.biases.append(np.random.uniform(-1, 1, size=(1, 1)))
+		self.weights.append(np.random.uniform(-1, 1, size=(self.num_units, 1)))
 
 	def __call__(self, X):
 		'''
@@ -161,8 +191,49 @@ def train(
 			1.1 Compute gradients
 			1.2 Update weights and biases using step() of optimizer.
 		3. Compute RMSE on dev data after running `max_epochs` epochs.
+
+	Here we have added the code to loop over batches and perform backward pass
+	for each batch in the loop.
+	For this code also, you are free to heavily modify it.
 	'''
-	raise NotImplementedError
+
+	m = train_input.shape[0]
+
+	for e in range(max_epochs):
+		epoch_loss = 0.
+		for i in range(0, m, batch_size):
+			batch_input = train_input[i:i+batch_size]
+			batch_target = train_target[i:i+batch_size]
+			pred = net(batch_input)
+
+			# Compute gradients of loss w.r.t. weights and biases
+			dW, db = net.backward(batch_input, batch_target, lamda)
+
+			# Get updated weights based on current weights and gradients
+			weights_updated, biases_updated = optimizer.step(net.weights, net.biases, dW, db)
+
+			# Update model's weights and biases
+			net.weights = weights_updated
+			net.biases = biases_updated
+
+			# Compute loss for the batch
+			batch_loss = loss_fn(batch_target, pred, net.weights, net.biases, lamda)
+			epoch_loss += batch_loss
+
+			#print(e, i, rmse(batch_target, pred), batch_loss)
+
+		#print(e, epoch_loss)
+
+		# Write any early stopping conditions required (only for Part 2)
+		# Hint: You can also compute dev_rmse here and use it in the early
+		# 		stopping condition.
+
+	# After running `max_epochs` (for Part 1) epochs OR early stopping (for Part 2), compute the RMSE on dev data.
+	dev_pred = net(dev_input)
+	dev_rmse = rmse(dev_target, dev_pred)
+
+	print('RMSE on dev data: {:.5f}'.format(dev_rmse))
+
 
 def get_test_data_predictions(net, inputs):
 	'''
