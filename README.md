@@ -1,7 +1,7 @@
 # CS 725 (Autumn 2020): Assignment 2
 
 
-This assignment is due by **11.55 pm on November 1, 2020**. For each additional day after Nov 1st until Nov 3rd, there will be a 10% reduction in marks. The submission portal on Moodle will close at 11.55 pm on Nov 3rd.
+This assignment is due by **11.55 pm on November 8, 2020**. For each additional day after Nov 8th until Nov 10th, there will be a 10% reduction in marks. The submission portal on Moodle will close at 11.55 pm on Nov 10th.
 
 ## General Instructions
 Please read the following important instructions before getting started on the assignment.
